@@ -8,4 +8,5 @@ with req.urlopen(request) as response:
   data=response.read().decode("utf-8")
   import bs4
   root=bs4.BeautifulSoup(data, "html.parser")
-  print(root.title.string)
+  titles=root.find("div", class_="title")
+  print(titles.a.string)
