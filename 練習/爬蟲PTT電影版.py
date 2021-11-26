@@ -10,5 +10,5 @@ with req.urlopen(request) as response:
   root=bs4.BeautifulSoup(data, "html.parser")
   titles=root.find_all("div", class_="title")
   for title in titles:
-    if title.a != "蜘蛛":
+    if title.a != "None":
       print(title.a.string)
