@@ -10,4 +10,8 @@ with req.urlopen(request) as response:
 import json
 data=data.replace("])}while(1);</x>","")
 data=json.loads(data)
-print(data)
+
+posts=data["payload"]["references"]["Post"]
+for key in posts:
+  post=posts[key]
+  print(post["title"])
