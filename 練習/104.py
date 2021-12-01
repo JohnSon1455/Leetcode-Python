@@ -136,7 +136,7 @@ if __name__ == "__main__":
     print('搜尋結果職缺總數：', total_count)
     # print(len(jobs))
     jobs = [job104_spider.search_job_transform(job) for job in jobs]
-    print(jobs[0])
+    print(jobs[1])
 
 
     job_info = job104_spider.get_job('71gqf')
